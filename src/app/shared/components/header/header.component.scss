@@ -33,4 +33,80 @@ button {
     flex-direction: row;
   }
 
+  .logo {
+    display: flex;
+    font-weight: bold;
+    font-size: 60px;
+    color: #ffffff;
+    animation: type 0.6s steps(10) forwards;
+    margin: 0px;
+    cursor: pointer;
+    position: fixed;
+    right: 150px;
+  }
+  
+  .logo .char {
+    display: inline-block;
+    opacity: 0;
+    animation: type 1s steps(1) forwards;
+  }
+
+  .logo .char:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .logo .char:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .initials {
+    right: 180px;
+    top: 20px;
+    font-size: 60px;
+    font-family: 'Skinz';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .M {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
+    color: rgb(61, 207, 182);
+    font-size: 70px;
+  }
+
+  .M2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 60px;
+  }
+
+  .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  logo:hover .initials {
+    color: transparent;
+  }
+  
+  .logo:hover .M2,
+  .logo:hover .M {
+    transition: 500ms;
+    color: transparent;
+    -webkit-text-stroke: 1px #5cd1b9;
+  }
+  
+  .logo:hover .name {
+    transition: 300ms;
+    color: transparent;
+    -webkit-text-stroke: 1px #5cd1b9;
+  }
   

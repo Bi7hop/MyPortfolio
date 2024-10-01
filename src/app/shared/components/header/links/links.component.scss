@@ -13,6 +13,26 @@
         font-weight: 400;
         line-height: 26px;
         transition: all .1s ease-in;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            content: "";
+            display: inline-block;
+            background-image: url("/assets/icons/dot.svg");
+            height: 8px;
+            width: 8px;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all 100ms ease-in;
+        }
+
+        &:hover::after {
+            opacity: 1; 
+        }
+    
     }
   }
   
