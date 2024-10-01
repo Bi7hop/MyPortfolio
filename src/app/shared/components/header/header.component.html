@@ -1,1 +1,12 @@
-<p>header works!</p>
+<header class="header">
+<section>
+  <nav>
+    
+    <button (click)="toggleLanguage()" (mouseover)="onHover()" (mouseleave)="onLeave()">
+      <img [src]="getButtonImage()" alt="Language Button">
+    </button>
+
+    <app-links></app-links>
+  </nav>
+</section>
+</header>

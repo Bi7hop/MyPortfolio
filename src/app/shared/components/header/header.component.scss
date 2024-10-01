@@ -1,0 +1,36 @@
+*{
+    font-family: Fira Code;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    top: 48px;
+    padding: 0 clamp(2px, 4dvw, 96px);
+    background-color: unset;
+    height: 50px;
+}
+
+button {
+    background: none; 
+    border: none; 
+    padding: 0; 
+    outline: none; 
+    cursor: pointer; 
+
+    >img {
+        display: block;
+    }
+
+  }
+
+  nav {
+    position: fixed;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-direction: row;
+  }
+
+  
