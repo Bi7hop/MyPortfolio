@@ -2,6 +2,10 @@
     font-family: Fira Code;
 }
 
+.test {
+    max-width: 1440px;
+}
+
 header {
     position: fixed;
     z-index: 10;
@@ -27,7 +31,7 @@ button {
   nav {
     position: fixed;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
     gap: 24px;
     flex-direction: row;
