@@ -35,6 +35,11 @@ section {
         height: auto;
         border-radius: 16px;
         z-index: 5;
+
+        &:hover + .profile-lines {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
     
 
@@ -43,6 +48,10 @@ section {
         z-index: 1;
         right: 80px;
         top: 30px;
+        opacity: 0;
+        transform: translateX(30px);  
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        pointer-events: none;
     }
 
 }
