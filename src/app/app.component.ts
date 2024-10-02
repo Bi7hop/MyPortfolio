@@ -6,6 +6,8 @@ import { MainContentComponent } from "./main-content/main-content.component";
 import { CommonModule } from '@angular/common';
 import { LinksComponent } from './shared/components/header/links/links.component';
 import { FooterComponent } from "./shared/components/footer/footer.component";
+import { AboutMeComponent } from './about-me/about-me.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +16,14 @@ import { FooterComponent } from "./shared/components/footer/footer.component";
     HeaderComponent,
     HeroComponent,
     MainContentComponent,
+    AboutMeComponent,
     CommonModule,
-    LinksComponent, FooterComponent],
+    LinksComponent,
+    FooterComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = 'portfolio';
 }
