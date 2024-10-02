@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
   items = [
-    'Frontend Developer',
     'Available for remote work',
+    'Frontend Developer',
     'Open to work',
     'Based in Steinfeld ( Oldenburg )'
   ];
