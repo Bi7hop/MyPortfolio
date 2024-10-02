@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
+  items = [
+    'Frontend Developer',
+    'Available for remote work',
+    'Open to work',
+    'Based in Steinfeld ( Oldenburg )'
+  ];
 }

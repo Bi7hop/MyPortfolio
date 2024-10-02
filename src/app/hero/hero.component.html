@@ -25,4 +25,16 @@
             <div class="seperator-right"></div>
         </div>
     </div>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            @for(number of [1, 2, 3, 4, 5]; track number){
+            @for (item of items ; track items){
+            <span class="dot">•</span>
+            <span>{{ item }}</span>
+            }
+            }
+        </div>
+    </div>
+    
 </section>
