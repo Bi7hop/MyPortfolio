@@ -38,7 +38,7 @@ section {
 
         &:hover + .profile-lines {
             opacity: 1;
-            transform: translateX(0);
+            transform: translate(-10px, 10px);
         }
     }
     
@@ -46,10 +46,10 @@ section {
     .profile-lines {
         position: absolute;
         z-index: 1;
-        right: 80px;
+        right: 30px;
         top: 30px;
         opacity: 0;
-        transform: translateX(30px);  
+        transform: translateX(0, 0);  
         transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         pointer-events: none;
     }
@@ -57,7 +57,7 @@ section {
 }
 
 .profile-img-container {
-    width: 50%;
+    // width: 50%;
     position: relative;
 }
 
