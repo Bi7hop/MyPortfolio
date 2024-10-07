@@ -1,4 +1,19 @@
 {
+"nav": {
+        "about": "About me",
+        "skills": "Skills",
+        "projects": "Projects"
+    },
+
+  "welcome": {
+    "button": "Projects",
+    "button2": "Contact",
+    "span1": "Open to work",
+    "span2": "Based in Steinfeld ( Oldenburg )",
+    "span3": "Available for remote work",
+    "span4": "Frontend Developer"
+  },
+
     "aboutme": {
     "title": "Who I am",
     "aboutme-title": "About me",
@@ -11,7 +26,7 @@
   "skills": {
     "title": "Technologies",
     "skillset": "Skill Set",
-    "text-skillset": "As part of my training in the front and backend fields, I have worked on various projects, utilizing a wide range of technologies and concepts. I am open to new approaches to continuously expand my skills and stay up to date in the ever-evolving world of web development.",
+    "text-skillset": "During my frontend development training, I have gained experience by working on different projects, applying a variety of technologies and concepts. I’m always eager to explore new methods and approaches to further develop my skills and stay up to date in the fast-paced field of web development.",
     "second-title": "Do you need an additional skill?",
     "second-text": "Feel free to contact me. I look forward to expanding on my previous knowledge and gaining new experiences.",
     "button": "Let's talk",

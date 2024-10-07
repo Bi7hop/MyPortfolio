@@ -5,8 +5,8 @@
             <h1 class="typing-text">Marcel Menke</h1>
         </div>
         <div class="button-container">
-            <a href="#projects-section" class="btn text"><span class="text">Check my work</span></a>
-            <a href="#contact-section" class="btn"><span class="text">Contact me</span></a>
+            <a href="#projects-section" class="btn text"><span class="text">{{ 'welcome.button' | translate }}</span></a>
+            <a href="#contact-section" class="btn"><span class="text">{{ 'welcome.button2' | translate }}</span></a>
         </div>
         <div class="seperator-container-left">
             <a href="#footer" class="scroll-down"><img src="./../../assets/icons/Vector 8.png" alt=""></a>
@@ -31,7 +31,7 @@
             @for(number of [1, 2, 3, 4, 5]; track number){
             @for (item of items ; track items){
             <span class="dot">•</span>
-            <span>{{ item }}</span>
+            <span>{{ item | translate }}</span>
             }
             }
         </div>
