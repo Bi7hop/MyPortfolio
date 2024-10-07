@@ -8,6 +8,7 @@ import { LinksComponent } from './shared/components/header/links/links.component
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { AboutMeComponent } from './about-me/about-me.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SkillSectionComponent } from "./skill-section/skill-section.component";
 
 @Component({
   selector: 'app-root',
@@ -19,8 +20,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     AboutMeComponent,
     CommonModule,
     LinksComponent,
-    FooterComponent,
-    ],
+    FooterComponent, SkillSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,1 +1,46 @@
-<p>skill-section works!</p>
+<section id="skill-section">
+    <div class="skill-container">
+      <div class="left-container">
+        <h2>{{ 'skills.title' }}</h2>
+        <div class="skill-text">
+          <h1>{{ 'skills.skillset' }}</h1>
+          <div class="text-container">
+            <p>{{ 'skills.text-skillset' }}</p>
+          </div>
+          <h2>{{ 'skills.second-title' }}</h2>
+          <div class="text-container">
+            <p>{{ 'skills.second-text' }}</p>
+          </div>
+          <a href="#contact-section" class="btn"><span class="text">{{ 'skills.button'  }}</span></a>
+        </div>
+      </div>
+      
+      <div class="right-container">
+        <div *ngFor="let skill of Frontendskills" class="">
+            <div class="icon-container">
+          <img [src]="skill.src" alt="{{ skill.text }}">
+          <span>{{ skill.text }}</span>
+        </div>
+        </div>
+      
+       
+        
+        <div class="mindset-icon-container" (mouseenter)="showPopup()" (mouseleave)="hidePopup()">
+          <div class="hover-popup" *ngIf="isPopupVisible">
+            <div class="mindset-icons">
+              <div><span>{{ 'skills.mindset' }}</span></div>
+              <div class="popup-icons">
+                <div><img src="../../assets/icons/Frame 301.png" alt=""></div>
+                <div><img src="../../assets/icons/Frame 302.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <img src="../../assets/icons/GrowthMindset.png" alt="">
+          <p>Growth Mindset</p>
+        </div>
+    </div>
+        
+       
+      </div>
+
+  </section>
