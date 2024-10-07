@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { LinksComponent } from "./links/links.component";
 import { TranslateService } from '@ngx-translate/core';
 
@@ -13,6 +13,7 @@ export class HeaderComponent {
 
   currentLanguage: 'en' | 'de' = 'en';  
   isHovered: boolean = false;
+  scrollPosition = 0;
 
   constructor(private translate: TranslateService) {
     this.translate.use(this.currentLanguage);
@@ -38,5 +39,10 @@ export class HeaderComponent {
     } else {
       return this.isHovered ? 'assets/icons/ger_btn_hover.png' : 'assets/icons/ger_btn.png';
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrollPosition = window.scrollY;
   }
 }

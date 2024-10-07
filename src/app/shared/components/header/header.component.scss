@@ -9,6 +9,15 @@ header {
     padding: 0 clamp(2px, 4dvw, 96px);
     background-color: unset;
     height: 50px;
+    transition: opacity 0.3s ease-in-out;
+
+  &.transparent {
+    opacity: 0.2;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 button {
@@ -31,6 +40,20 @@ button {
     align-items: center;
     gap: 24px;
     flex-direction: row;
+  }
+
+  nav a {
+    color: white;
+    transition: color 0.3s ease-in-out;
+    opacity: 1;
+    
+    .transparent & {
+      opacity: 0.2;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .logo {
