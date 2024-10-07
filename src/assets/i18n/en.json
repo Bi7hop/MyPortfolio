@@ -2,9 +2,9 @@
     "aboutme": {
     "title": "Who I am",
     "aboutme-title": "About me",
-    "first-text": "Hello, my name is Marcel, and I'm a German-speaking frontend developer from Steinfeld (Oldenburg). Inspired by the limitless possibilities of IT, I am passionate about creating visually appealing and intuitive website.",
-    "second-text": "I am versatile and perform effectively both on-site in Steinfeld ( Oldenburg ) and remotely. My adaptability enables me to seamlessly integrate into teams or work independently on projects, always maintaining clear communication and a structured approach to my work.",
-    "third-text": "I am receptive to new ideas and consistently strive for personal development. Always seeking exciting challenges, I view each task as an opportunity to elevate my knowledge and skills to the next level.",
-    "fourth-text": "For me, programming goes beyond just writing code—it's a creative approach to solving problems. I take pride in simplifying complex technical challenges into intuitive, user-friendly solutions. This is how I help you achieve your goals and bring your visions to life."
+    "text-one": "Hello, my name is Marcel, and I'm a German-speaking frontend developer from Steinfeld (Oldenburg). Inspired by the limitless possibilities of IT, I am passionate about creating visually appealing and intuitive website.",
+    "text-two": "I am versatile and perform effectively both on-site in Steinfeld ( Oldenburg ) and remotely. My adaptability enables me to seamlessly integrate into teams or work independently on projects, always maintaining clear communication and a structured approach to my work.",
+    "text-three": "I am receptive to new ideas and consistently strive for personal development. Always seeking exciting challenges, I view each task as an opportunity to elevate my knowledge and skills to the next level.",
+    "text-four": "For me, programming goes beyond just writing code—it's a creative approach to solving problems. I take pride in simplifying complex technical challenges into intuitive, user-friendly solutions. This is how I help you achieve your goals and bring your visions to life."
   }
 }
