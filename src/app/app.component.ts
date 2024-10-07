@@ -11,6 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SkillSectionComponent } from "./skill-section/skill-section.component";
 import { PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProjectsComponent } from "./projects/projects.component";
 
 @Component({
   selector: 'app-root',
@@ -23,10 +24,11 @@ import { Router } from '@angular/router';
     AboutMeComponent,
     CommonModule,
     LinksComponent,
-    FooterComponent, 
+    FooterComponent,
     SkillSectionComponent,
-    TranslateModule
-  ],
+    TranslateModule,
+    ProjectsComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
