@@ -11,7 +11,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SkillSectionComponent } from "./skill-section/skill-section.component";
 import { PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProjectsComponent } from "./projects/projects.component";
+import { ProjectsComponent } from './projects/projects.component';
+
 
 @Component({
   selector: 'app-root',

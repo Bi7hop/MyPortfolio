@@ -41,9 +41,9 @@
 
   "project-info": {
     "subtitle": "Task Managment Tool",
-    "description": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, and assign users and categories.",
+    "description": "Task manager inspired by the Kanban System. Create and organize task using drag and drop functions, assign users and categories",
     "subtitle1": "2D Jump and Run Game",
-    "description1": "A jumping, running, and throwing game based on an object-oriented approach. Help Pepe find coins and Tabasco sauce to fight against the crazy hen.",
+    "description1": "Jump, run and throw game based on object-oriented approach. Help Pepe to find Coins and tabasco salsa to fight against the crazy hen.",
     "button": "Next project"
   }
 }

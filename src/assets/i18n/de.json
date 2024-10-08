@@ -30,6 +30,20 @@
       "second-text": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern und neue Erfahrungen zu sammeln.",
       "button": "Kontaktieren Sie mich",
       "mindset": "Ich habe ein besonderes Interesse am Lernen"
-    }
+    },
+
+    "projects": {
+    "title": "Projekte",
+    "text": "Entdecken Sie eine Auswahl meiner Arbeiten hier",
+    "text2": "Interagieren Sie mit meinen Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+
+  "project-info": {
+    "subtitle": "Aufgabenmanager Tool",
+    "description": "Ein Kanban-inspirierter Aufgabenmanager ermöglicht es, Aufgaben per Drag-and-Drop zu organisieren, Nutzern und Kategorien zuzuweisen und den Fortschritt auf einem übersichtlichen Board zu verfolgen.",
+    "subtitle1": "2D Jump and Run Spiel",
+    "description1": "Hilf Pepe in einem actiongeladenen Jump-and-Run-Spiel, Münzen und Tabasco-Salsa zu sammeln, um sich gegen die verrückte Henne zu verteidigen, indem du geschickt springst, rennst und Objekte wirfst.",
+    "button": "Next project"
+  }
   }
   
