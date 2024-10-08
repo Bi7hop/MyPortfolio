@@ -31,5 +31,19 @@
     "second-text": "Feel free to contact me. I look forward to expanding on my previous knowledge and gaining new experiences.",
     "button": "Let's talk",
     "mindset": "I have a  special interest in learning"
+  },
+
+  "projects": {
+    "title": "Projects",
+    "text": "Discover a selection of my work here and",
+    "text2": "interact with my projects to see my skills in action."
+  },
+
+  "project-info": {
+    "subtitle": "Task Managment Tool",
+    "description": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, and assign users and categories.",
+    "subtitle1": "2D Jump and Run Game",
+    "description1": "A jumping, running, and throwing game based on an object-oriented approach. Help Pepe find coins and Tabasco sauce to fight against the crazy hen.",
+    "button": "Next project"
   }
 }
