@@ -44,6 +44,13 @@
     "subtitle1": "2D Jump and Run Spiel",
     "description1": "Hilf Pepe in einem actiongeladenen Jump-and-Run-Spiel, Münzen und Tabasco-Salsa zu sammeln, um sich gegen die verrückte Henne zu verteidigen, indem du geschickt springst, rennst und Objekte wirfst.",
     "button": "Next project"
+  },
+
+  "references": {
+    "title": "Was meine Kollegen über mich sagen",
+      "textbox1": "Marcel hat sich als äußerst verlässlicher Teamkollege erwiesen. Seine technischen Fähigkeiten und sein proaktives Handeln waren entscheidend für den Erfolg unseres Projekts.",
+      "textbox2": "Marcels ruhige Art hat uns geholfen, stets fokussiert an unseren Aufgaben zu arbeiten. Seine technischen Fähigkeiten waren von großem Wert für den Projekterfolg.",
+      "textbox3": "Die Zusammenarbeit mit Marcel ist immer eine Freude. Er bringt frische Ideen und kreative Lösungen mit ein."
   }
   }
   

@@ -16,9 +16,9 @@ export class ReferencesComponent {
   isHoveringNext = false;
   
   references = [
-    { title: 'references.textbox1', name: 'Name' },
-    { title: 'references.textbox2', name: 'Name' },
-    { title: 'references.textbox3', name: 'Name' }
+    { title: 'references.textbox1', name: 'Homer Simpson' },
+    { title: 'references.textbox2', name: 'Maggi Simpson' },
+    { title: 'references.textbox3', name: 'Bart Simpson' }
   ];
 
   constructor() { }
@@ -37,5 +37,9 @@ export class ReferencesComponent {
 
   onHoverNext(isHovering: boolean) {
     this.isHoveringNext = isHovering;
+  }
+
+  setActive(index: number) {
+    this.currentIndex = index;  
   }
 }
