@@ -1,0 +1,226 @@
+section {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background-color: #1c1c1c;
+    width: 100vw;
+    height: 50vh;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color:#3DCFB6;
+        font-family: 'Conthrax', sans-serif;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    background: #1c1c1c;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 20px;
+  
+    button {
+      background-color: transparent; 
+      border: none;
+      padding: 0;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+  
+      &:hover {
+        transform: scale(1.1); 
+      }
+  
+      img {
+        width: 60px; 
+        height: 60px;
+      }
+    }
+  
+    .dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+  
+      img {
+        width: 10px; 
+        height: 10px;
+        margin: 0 5px;
+      }
+    }
+  }
+  
+  
+  .carousel__item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    opacity: 0;
+    filter: drop-shadow(0 2px 2px #555);
+    will-change: transform, opacity;
+    -webkit-animation: carousel-animate-vertical 54s linear infinite;
+            animation: carousel-animate-vertical 54s linear infinite;
+  }
+  
+  .carousel__item:nth-child(1) {
+    -webkit-animation-delay: calc(6s * -1);
+            animation-delay: calc(6s * -1);
+  }
+  
+  .carousel__item:nth-child(2) {
+    -webkit-animation-delay: calc(6s * 0);
+            animation-delay: calc(6s * 0);
+  }
+  
+  .carousel__item:nth-child(3) {
+    -webkit-animation-delay: calc(6s * 1);
+            animation-delay: calc(6s * 1);
+  }
+  
+  .carousel__item:nth-child(4) {
+    -webkit-animation-delay: calc(6s * 2);
+            animation-delay: calc(6s * 2);
+  }
+  
+  .carousel__item:nth-child(5) {
+    -webkit-animation-delay: calc(6s * 3);
+            animation-delay: calc(6s * 3);
+  }
+  
+  .carousel__item:nth-child(6) {
+    -webkit-animation-delay: calc(6s * 4);
+            animation-delay: calc(6s * 4);
+  }
+  
+  .carousel__item:nth-child(7) {
+    -webkit-animation-delay: calc(6s * 5);
+            animation-delay: calc(6s * 5);
+  }
+  
+  .carousel__item:nth-child(8) {
+    -webkit-animation-delay: calc(6s * 6);
+            animation-delay: calc(6s * 6);
+  }
+  
+  .carousel__item:last-child {
+    -webkit-animation-delay: calc(-6s * 2);
+            animation-delay: calc(-6s * 2);
+  }
+  
+  .carousel__item-body {
+    width: 100%;
+    background-color: #20706347;
+    border-radius: 32px;
+    padding: 16px 20px 16px 70px;
+    border: 1px solid #3dcfb6;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    color: #ffffff;
+    font-family: 'Karla', sans-serif;
+  }
+  
+  .name-line-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    flex-grow: 1;
+    max-width: 500px;
+    border: none;
+    border-top: 1px solid #ffffff;
+    margin-right: 10px; 
+}
+
+.name {
+    white-space: nowrap;
+    color: #ffffff;
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.carousel__item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .carousel__item.active {
+    display: flex;
+    opacity: 1;
+  }
+
+@media(max-width: 1460px) {
+  section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media(max-width: 635px) {
+  section {
+    height: 70vh;
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 0px;
+      h1 {
+        font-size: 24px;
+        margin-bottom: 0px;
+      }
+    }
+
+  }
+
+  .carousel {
+    max-width: 310px;
+
+    .wrapper {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}

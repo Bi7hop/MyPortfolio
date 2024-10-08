@@ -12,6 +12,7 @@ import { SkillSectionComponent } from "./skill-section/skill-section.component";
 import { PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
+import { ReferencesComponent } from "./references/references.component";
 
 
 @Component({
@@ -28,7 +29,8 @@ import { ProjectsComponent } from './projects/projects.component';
     FooterComponent,
     SkillSectionComponent,
     TranslateModule,
-    ProjectsComponent
+    ProjectsComponent,
+    ReferencesComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

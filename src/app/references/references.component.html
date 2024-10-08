@@ -1,0 +1,36 @@
+<section>
+    <div class="title">
+      <h1>{{ 'references.title' | translate }}</h1>
+    </div>
+    <div class="wrapper">
+      <div class="carousel">
+        <div class="carousel__item" *ngFor="let reference of references; let i = index"
+          [class.active]="i === currentIndex">
+          <div class="carousel__item-body">
+            <p class="title">{{ reference.title | translate }}</p>
+            <div class="name-line-container">
+              <hr class="line">
+              <span class="name">{{ reference.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="controls">
+        <button (click)="previousButton()" (mouseenter)="onHoverPrevious(true)" (mouseleave)="onHoverPrevious(false)">
+          <img [src]="isHoveringPrevious ? 'assets/icons/refrences/back.hover.png' : 'assets/icons/refrences/back.png'" alt="Previous" class="arrow back-arrow">
+        </button>
+    
+        <div class="dots">
+          <img *ngFor="let reference of references; let i = index"
+               [src]="i === currentIndex ? 'assets/icons/refrences/dotgreen.png' : 'assets/icons/refrences/dot.png'"
+               [alt]="'dot ' + i">
+        </div>
+    
+        <button (click)="nextButton()" (mouseenter)="onHoverNext(true)" (mouseleave)="onHoverNext(false)">
+          <img [src]="isHoveringNext ? 'assets/icons/refrences/next.hover.png' : 'assets/icons/refrences/next.png'" alt="Next" class="arrow next-arrow">
+        </button>
+      </div>
+  </section>
+  
