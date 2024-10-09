@@ -16,4 +16,9 @@ export class HeroComponent {
     'welcome.span1',
     'welcome.span3'
   ];
+
+  scrollToProjects() {
+    const projectsSection = document.getElementById('projects-section');
+    projectsSection?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
