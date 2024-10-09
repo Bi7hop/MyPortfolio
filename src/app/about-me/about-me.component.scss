@@ -58,10 +58,13 @@ section {
 
 .profile-img-container {
     // width: 50%;
-    position: relative;
+    transform: translateX(-20vw); 
+    transition: transform 0s ease; 
 }
 
 .about-me-text-container {
+    transform: translateX(20vw);
+    transition: transform 0s ease;
     width: 50%;
     color: aliceblue;
     font-family: sans-serif;

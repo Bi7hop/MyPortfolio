@@ -1,12 +1,7 @@
 import { Routes } from '@angular/router';
-import { HeroComponent } from './hero/hero.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export const routes: Routes = [
-  { path: 'hero', component: HeroComponent },
-  // { path: 'main-content', component: MainContentComponent },
-  { path: 'about-me', component: AboutMeComponent },  
-  { path: '', redirectTo: '/hero', pathMatch: 'full' },
+  { path: 'landing', component: LandingPageComponent },
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
 ];
