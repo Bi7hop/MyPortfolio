@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, Inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-skill-section',
@@ -10,7 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './skill-section.component.html',
   styleUrl: './skill-section.component.scss'
 })
-export class SkillSectionComponent {
+export class SkillSectionComponent implements AfterViewInit {
 
   isPopupVisible: boolean = false;
 
@@ -27,6 +30,17 @@ export class SkillSectionComponent {
     { 'src': '../../assets/icons/Scrum.png', 'text': 'Scrum' },
   ];
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 2000,   
+        offset: 0,        
+        once: false       
+      });
+    }
+  }
 
   showPopup() {
     this.isPopupVisible = true;
@@ -35,5 +49,4 @@ export class SkillSectionComponent {
   hidePopup() {
     this.isPopupVisible = false;
   }
-
 }
