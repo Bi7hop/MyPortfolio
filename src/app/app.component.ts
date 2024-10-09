@@ -13,6 +13,7 @@ import { PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { ReferencesComponent } from "./references/references.component";
+import { ContactComponent } from "./contact/contact.component";
 
 
 @Component({
@@ -30,7 +31,8 @@ import { ReferencesComponent } from "./references/references.component";
     SkillSectionComponent,
     TranslateModule,
     ProjectsComponent,
-    ReferencesComponent
+    ReferencesComponent,
+    ContactComponent
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
