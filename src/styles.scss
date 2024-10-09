@@ -4,3 +4,22 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3DCFB6;
+    border-radius: 10px;
+    border: 1px solid #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2BA591;
+}
