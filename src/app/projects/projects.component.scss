@@ -301,6 +301,10 @@ body {
     z-index: 10; 
 }
 
+.no-scroll {
+    overflow: hidden;  
+}
+
 @media (max-width: 1450px) {
     section {
         padding-left: 10px;
