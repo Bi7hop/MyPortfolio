@@ -2,7 +2,7 @@
   <div class="skill-container">
     <div class="left-container">
       <h2>{{ 'skills.title' | translate }}</h2>
-      <div class="skill-text" data-aos="fade-right" data-aos-offset="0" data-aos-duration="1000">
+      <div class="skill-text" data-aos="flip-up" data-aos-duration="2000" data-aos-offset="200">
         <h1>{{ 'skills.skillset' | translate }}</h1>
         <div class="text-container">
           <p>{{ 'skills.text-skillset' | translate }}</p>
@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="right-container" data-aos="fade-left" data-aos-offset="0" data-aos-duration="1000">
+    <div class="right-container" data-aos="flip-up" data-aos-duration="2000" data-aos-offset="200">
       <div *ngFor="let skill of Frontendskills" class="">
         <div class="icon-container">
           <img [src]="skill.src" alt="{{ skill.text }}">
