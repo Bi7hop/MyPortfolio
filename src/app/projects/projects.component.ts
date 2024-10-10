@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -18,6 +18,7 @@ export class ProjectsComponent {
   currentIndex: number = 0;
   showProjects: boolean = true;
 
+  constructor(private renderer: Renderer2) {}
   
   projects = [
     {
@@ -61,6 +62,13 @@ export class ProjectsComponent {
   selectProject(project: any): void {
     this.selectedProject = project;
     this.showProjectInfo = true;
+    this.renderer.addClass(document.body, 'no-scroll');
+  }
+
+  closeProject(): void {
+    this.selectedProject = null;
+    this.showProjectInfo = false;
+    this.renderer.removeClass(document.body, 'no-scroll'); 
   }
 
   toggleProjects(): void {
