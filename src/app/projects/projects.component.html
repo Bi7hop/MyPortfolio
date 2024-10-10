@@ -1,5 +1,4 @@
 <section id="projects-section">
-    <div *ngIf="selectedProject" class="overlay" (click)="closeProject()"></div>
     <div class="projects-container" data-aos="flip-up" data-aos-duration="2000" data-aos-offset="200">
       <div class="projects-title">
         <h3>Portfolio</h3>
@@ -34,7 +33,7 @@
         <div class="seperator"></div>
     </div>
 
-    <div class="project-info" *ngIf="selectedProject" data-aos="zoom-in" data-aos-duration="1000">
+    <div class="project-info" *ngIf="selectedProject">
         <div class="project-left">
             <h1> {{ selectedProject.number }}</h1>
             <h2>{{ selectedProject.title }}</h2>
