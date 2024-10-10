@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 8px;
