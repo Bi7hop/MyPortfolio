@@ -52,5 +52,12 @@
       "textbox1": "Marcel has proven to be an incredibly reliable team member. His technical skills and proactive approach were key to the success of our project.",
       "textbox2": "Marcel's calm demeanor helped us stay focused on our tasks. His technical expertise was highly valuable to the project's success.",
       "textbox3": "Working with Marcel is always a pleasure. He brings fresh ideas and creative solutions to the table."
-  }
+  },
+
+  "imprint": {
+    "title": "Legal Notice",
+    "subtitle": "Information pursuant to § 5 TMG",
+    "subtitle2": "Represented by",
+    "contact": "Contact"
+}
 }
