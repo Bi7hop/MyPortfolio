@@ -4,7 +4,6 @@ import { HeaderComponent } from "./shared/components/header/header.component";
 import { HeroComponent } from "./hero/hero.component";
 import { MainContentComponent } from "./main-content/main-content.component";
 import { CommonModule } from '@angular/common';
-import { LinksComponent } from './shared/components/header/links/links.component';
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { AboutMeComponent } from './about-me/about-me.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -26,7 +25,6 @@ import { ContactComponent } from "./contact/contact.component";
     MainContentComponent,
     AboutMeComponent,
     CommonModule,
-    LinksComponent,
     FooterComponent,
     SkillSectionComponent,
     TranslateModule,
@@ -45,7 +43,6 @@ export class AppComponent {
     private router: Router,
     private translate: TranslateService
   ) {
-    // Set default language
     this.translate.setDefaultLang('en');
     this.translate.use('en');
   }

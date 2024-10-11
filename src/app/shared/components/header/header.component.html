@@ -1,19 +1,35 @@
 <header [class.transparent]="scrollPosition > 50" class="header">
-<section>
-  <nav>
-    
-    <button (click)="toggleLanguage()" (mouseover)="onHover()" (mouseleave)="onLeave()">
-      <img [src]="getButtonImage()" alt="Language Button">
-    </button>
-
-    <app-links></app-links>
-
-    <div class="logo">
-        <div class="initials">
-            <span class="M">M</span>
-            <span class="M2">M</span>
+  <section>
+    <nav class="header-navigation">
+      <div (click)="openMenu()" class="mobile-menu">
+        <img class="burger" [src]="menuIcon" alt="Menu Icon">
+        <div class="nav-link-mobile" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}">
+          <div class="wrapper-mobile">
+            <a draggable="false" (click)="scrollToSection('about-me')">{{ 'nav.about' | translate }}</a>
+            <a draggable="false" (click)="scrollToSection('skill-section')">{{ 'nav.skills' | translate }}</a>
+            <a draggable="false" (click)="scrollToSection('projects-section')">{{ 'nav.projects' | translate }}</a>
+            <button class="language-mobile" (click)="toggleLanguage()" (mouseover)="onHover()" (mouseleave)="onLeave()">
+              <img [src]="getButtonImage()" alt="Language Button">
+            </button>
+          </div>
         </div>
-    </div>
-  </nav>
-</section>
+      </div>
+      <div class="nav-link-container">
+        <button class="language" (click)="toggleLanguage()" (mouseover)="onHover()" (mouseleave)="onLeave()">
+          <img [src]="getButtonImage()" alt="Language Button">
+        </button>
+        <div class="wrapper">
+          <a draggable="false" (click)="scrollToSection('about-me')">{{ 'nav.about' | translate }}</a>
+          <a draggable="false" (click)="scrollToSection('skill-section')">{{ 'nav.skills' | translate }}</a>
+          <a draggable="false" (click)="scrollToSection('projects-section')">{{ 'nav.projects' | translate }}</a>
+        </div>
+      </div>
+      <div class="logo">
+        <div class="initials">
+          <span class="M">M</span>
+          <span class="M2">M</span>
+        </div>
+      </div>
+    </nav>
+  </section>
 </header>
