@@ -5,7 +5,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [ CommonModule, TranslateModule],
+  imports: [ CommonModule, TranslateModule  
+  ],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
