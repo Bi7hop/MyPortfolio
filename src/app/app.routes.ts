@@ -7,5 +7,5 @@ export const routes: Routes = [
   { path: 'landing', component: LandingPageComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   {path: 'imprint', component: ImprintComponent},
-  {path: 'policy', component: PrivacyComponent},
+  {path: 'privacy', component: PrivacyComponent},
 ];
