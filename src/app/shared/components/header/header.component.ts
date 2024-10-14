@@ -1,11 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ CommonModule, TranslateModule],
+  imports: [ CommonModule, TranslateModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']  
 })
@@ -15,9 +16,21 @@ export class HeaderComponent {
   isHovered: boolean = false;
   scrollPosition = 0;
   isMenuOpen = false;
+  private targetSection: string | null = null;  // Für das Fragment speichern
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     this.translate.use(this.currentLanguage);
+
+    // Subscribe to navigation events to handle fragment scrolling
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Prüfe, ob ein Fragment (Sektion) gespeichert ist
+        if (this.targetSection) {
+          this.scrollToSection(this.targetSection);
+          this.targetSection = null; // Fragment nach dem Scrollen löschen
+        }
+      }
+    });
   }
 
   toggleLanguage() {
@@ -52,6 +65,17 @@ export class HeaderComponent {
 
   get menuIcon() {
     return this.isMenuOpen ? 'assets/icons/burgermenu.hover.png' : 'assets/icons/burgermenu.png';
+  }
+
+  navigateToSection(section: string) {
+    if (this.router.url !== '/') {
+      // Speichere das Ziel-Fragment und navigiere zur Landing Page
+      this.targetSection = section;
+      this.router.navigate(['/']);
+    } else {
+      // Wenn bereits auf der Landing Page, scrolle sofort
+      this.scrollToSection(section);
+    }
   }
 
   scrollToSection(section: string) {

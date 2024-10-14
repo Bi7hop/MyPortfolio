@@ -5,9 +5,10 @@
         <img class="burger" [src]="menuIcon" alt="Menu Icon">
         <div class="nav-link-mobile" [ngStyle]="{'display': isMenuOpen ? 'flex' : 'none'}">
           <div class="wrapper-mobile">
-            <a draggable="false" (click)="scrollToSection('about-me')">{{ 'nav.about' | translate }}</a>
-            <a draggable="false" (click)="scrollToSection('skill-section')">{{ 'nav.skills' | translate }}</a>
-            <a draggable="false" (click)="scrollToSection('projects-section')">{{ 'nav.projects' | translate }}</a>
+            <a (click)="navigateToSection('about-me')" draggable="false">{{ 'nav.about' | translate }}</a>
+            <a (click)="navigateToSection('skill-section')" draggable="false">{{ 'nav.skills' | translate }}</a>
+            <a (click)="navigateToSection('projects-section')" draggable="false">{{ 'nav.projects' | translate }}</a>
+
             <button class="language-mobile" (click)="toggleLanguage()" (mouseover)="onHover()" (mouseleave)="onLeave()">
               <img [src]="getButtonImage()" alt="Language Button">
             </button>
@@ -19,9 +20,11 @@
           <img [src]="getButtonImage()" alt="Language Button">
         </button>
         <div class="wrapper">
-          <a draggable="false" (click)="scrollToSection('about-me')">{{ 'nav.about' | translate }}</a>
-          <a draggable="false" (click)="scrollToSection('skill-section')">{{ 'nav.skills' | translate }}</a>
-          <a draggable="false" (click)="scrollToSection('projects-section')">{{ 'nav.projects' | translate }}</a>
+          <a (click)="navigateToSection('about-me')" draggable="false">{{ 'nav.about' | translate }}</a>
+          <a (click)="navigateToSection('skill-section')" draggable="false">{{ 'nav.skills' | translate }}</a>
+          <a (click)="navigateToSection('projects-section')" draggable="false">{{ 'nav.projects' | translate }}</a>
+
+
         </div>
       </div>
       <div class="logo">
