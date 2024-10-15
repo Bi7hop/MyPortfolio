@@ -13,5 +13,48 @@ label {
   font-family: 'Karla', sans-serif;
 }
 
+.contact-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    padding: 150px 0;
+    max-width: 1440px;
+    justify-content: space-between;
+    width: 100%;
 
+    .contact-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        span {
+            color: #3DCFB6;
+            font-family: 'Karla', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Fira Code', sans-serif;
+            color: #3DCFB6;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            font-family: 'Karla', sans-serif;
+            color: #3DCFB6;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            font-family: 'Karla', sans-serif;
+            color: #ffffff;
+        }
+    }
+}
 
