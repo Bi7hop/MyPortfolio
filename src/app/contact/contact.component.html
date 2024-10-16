@@ -12,50 +12,50 @@
             <p>{{ 'contact.textbox2' | translate }} <span>{{ 'contact.span' | translate }}</span></p>
           </div>
         </div>
-        <a href="#welcome-area" class="scroll-up">
+        <a (click)="scrollToTop()" class="scroll-up">
           <img src="../../assets/icons/Vector 8.png" alt="Scroll up">
         </a>
       </div>
       <div class="right-container">
-        <form class="contact-formular">
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-formular">
           <div class="top-side">
             <div class="input">
               <label for="name">{{ 'contactform.name' | translate }}</label>
-              <input type="text" id="name" placeholder="{{ 'placeholder.name' | translate }}" autocomplete="off" required />
-              <div>
+              <input type="text" id="name" formControlName="name" placeholder="{{ 'placeholder.name' | translate }}" autocomplete="off" required />
+              <div *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">
                 <small class="error">Please enter your name.</small>
               </div>
             </div>
             <div class="input">
               <label for="email">{{ 'contactform.email' | translate }}</label>
-              <input type="email" id="email" placeholder="{{ 'placeholder.email' | translate }}" autocomplete="off" required />
-              <div>
+              <input type="email" id="email" formControlName="email" placeholder="{{ 'placeholder.email' | translate }}" autocomplete="off" required />
+              <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
                 <small class="error">Please enter a valid email.</small>
               </div>
             </div>
             <div class="input">
               <label for="message">{{ 'contactform.message' | translate }}</label>
-              <textarea id="message" placeholder="{{ 'placeholder.message' | translate }}" rows="2" required></textarea>
-              <div>
-                <small class="error">Message must be at least 10 words long.</small>
+              <textarea id="message" formControlName="message" placeholder="{{ 'placeholder.message' | translate }}" rows="2" required></textarea>
+              <div *ngIf="contactForm.controls['message'].errors?.['wordCount'] && contactForm.controls['message'].touched">
+                <small class="error">Message must be at least 8 words long.</small>
               </div>
             </div>
           </div>
           <div class="bottom-side">
             <div class="send-contact">
-              <input type="checkbox" id="check" class="checkbox" autocomplete="off" />
+              <input type="checkbox" id="check" class="checkbox" formControlName="agree" autocomplete="off" />
               <label id="label-white" for="check">{{ 'policy.text1' | translate }} <a href="/privacy">{{ 'policy.text2' | translate }}</a> {{ 'policy.text3' | translate }}</label>
             </div>
             <div class="btn-container">
-              <button type="submit">{{ 'contactform.button' | translate }}</button>
+              <button type="submit" [disabled]="contactForm.invalid">{{ 'contactform.button' | translate }}</button>
             </div>
           </div>
         </form>
-        <div class="sentmessage">
+        <div class="sentmessage" *ngIf="messageSent">
           <p>Message sent successfully!</p>
         </div>
-        <div>
-          <p class="error">Error message here</p>
+        <div *ngIf="errorMessage">
+          <p class="error">{{ errorMessage }}</p>
         </div>
       </div>
     </div>

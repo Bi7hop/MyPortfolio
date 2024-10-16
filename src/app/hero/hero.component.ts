@@ -28,4 +28,11 @@ export class HeroComponent {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  scrollToFooter() {
+    const footerSection = document.getElementById('footer');
+    if (footerSection) {
+      footerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
