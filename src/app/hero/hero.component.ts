@@ -21,4 +21,11 @@ export class HeroComponent {
     const projectsSection = document.getElementById('projects-section');
     projectsSection?.scrollIntoView({ behavior: 'smooth' });
   }
+
+  scrollToContact() {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
