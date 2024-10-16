@@ -178,7 +178,18 @@
     "DATA_STORAGE_EMAIL_PHONE_FAX": "The processing of this data is based on Art. 6 para. 1 lit. b GDPR, if your request is related to the fulfillment of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of the inquiries addressed to us (Art. 6 para. 1 lit. f GDPR) or on your consent (Art. 6 para. 1 lit. a GDPR) if this was requested; the consent can be revoked at any time.",
     "SOURCE": "Source: https://www.e-recht24.de",
     "SCROLL_UP": "Scroll up"
-  
- 
+},
+
+"error": {
+    "name": "Please enter your name.",
+    "email": "Please enter a valid email.",
+    "message": "Message must be at least 8 words long.",
+    
+   
+"general": "An error occurred. Please try again."
+  },
+
+  "sent": {
+    "message": "Message sent successfully!"
 }
 }

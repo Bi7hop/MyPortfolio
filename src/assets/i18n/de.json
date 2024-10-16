@@ -173,7 +173,26 @@
     "DATA_STORAGE_EMAIL_PHONE_FAX": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.",
     "SOURCE": "Quelle: https://www.e-recht24.de",
     "SCROLL_UP": "Nach oben scrollen"
-  }
+  },
+
+  "error": {
+    "name": "Bitte geben Sie Ihren Namen ein.",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    
+   
+"message": "Die Nachricht muss mindestens 8 Wörter lang sein.",
+    
+   
+"general": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+},
+
+"sent": {
+    
+  
+"message": "Nachricht erfolgreich gesendet!"
+  
+ 
+}
 
   }
   
