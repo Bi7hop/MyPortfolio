@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
@@ -6,28 +6,38 @@ import { Router, NavigationEnd, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ CommonModule, TranslateModule, RouterModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']  
+  styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   currentLanguage: 'en' | 'de' = 'en';  
   isHovered: boolean = false;
   scrollPosition = 0;
   isMenuOpen = false;
-  private targetSection: string | null = null;  // Für das Fragment speichern
+  private targetSection: string | null = null;
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(private translate: TranslateService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.initializeLanguage();
+    this.subscribeToNavigation();
+  }
+
+  initializeLanguage() {
+    if (this.isBrowserEnvironment() && window.localStorage) {
+      this.currentLanguage = localStorage.getItem('language') as 'en' | 'de' || 'en';
+    }
     this.translate.use(this.currentLanguage);
+  }
 
-    // Subscribe to navigation events to handle fragment scrolling
+  subscribeToNavigation() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        // Prüfe, ob ein Fragment (Sektion) gespeichert ist
         if (this.targetSection) {
           this.scrollToSection(this.targetSection);
-          this.targetSection = null; // Fragment nach dem Scrollen löschen
+          this.targetSection = null;
         }
       }
     });
@@ -36,6 +46,13 @@ export class HeaderComponent {
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translate.use(this.currentLanguage);
+    if (this.isBrowserEnvironment() && window.localStorage) {
+      localStorage.setItem('language', this.currentLanguage);
+    }
+  }
+
+  isBrowserEnvironment(): boolean {
+    return typeof window !== 'undefined';
   }
 
   onHover() {
@@ -69,11 +86,9 @@ export class HeaderComponent {
 
   navigateToSection(section: string) {
     if (this.router.url !== '/') {
-      // Speichere das Ziel-Fragment und navigiere zur Landing Page
       this.targetSection = section;
       this.router.navigate(['/']);
     } else {
-      // Wenn bereits auf der Landing Page, scrolle sofort
       this.scrollToSection(section);
     }
   }
