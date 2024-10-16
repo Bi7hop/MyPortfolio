@@ -59,5 +59,32 @@
     "subtitle": "Information pursuant to § 5 TMG",
     "subtitle2": "Represented by",
     "contact": "Contact"
-}
+},
+
+"contact": {
+    "contact": "Contact me",
+    "title": "Let's work",
+    "title1": "together",
+    "title2": "Got a Problem to solve?",
+    "textbox": "Contact me through the form. I am interested in hearing from you,",
+    "textbox1": "knowing your ideas, and contributing to your projects with my work.",
+    "textbox2": "Need a Frontend developer? Let's talk!",
+    "span": "Let's talk"
+  },
+  "contactform": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "button": "Say Hello ;)"
+  },
+  "placeholder": {
+    "name": "Your name goes here",
+    "email": "youremail@email.com",
+    "message": "Hello Marcel, I am interested in..."
+  },
+  "policy": {
+    "text1": "I've read the",
+    "text2": "privacy policy",
+    "text3": "and agree to the processing of my data as outlined."
+  }
 }
