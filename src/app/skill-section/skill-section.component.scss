@@ -18,6 +18,7 @@ section {
     justify-content: center;
     color: aliceblue;
     gap: 20px;
+    width: 85vw;
   }
   
   .left-container {
@@ -200,6 +201,15 @@ section {
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    [data-aos] {
+      opacity: 1 !important;  /* Animationen auf mobilen Geräten verhindern */
+      transform: none !important;
+      transition: none !important; /* Entferne die Übergänge */
+    }
+  }
+  
   
   @media (max-width: 600px) {
     section {

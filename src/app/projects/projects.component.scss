@@ -19,8 +19,8 @@ article {
     max-width: 1440px;
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    width: 95%;
+    // width: 100vw;
+    width: 85vw;
     margin-bottom: 80px;
 
     .projects-title {
@@ -328,6 +328,15 @@ body {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    [data-aos] {
+      opacity: 1 !important;  /* Animationen auf mobilen Geräten verhindern */
+      transform: none !important;
+      transition: none !important; /* Entferne die Übergänge */
+    }
+  }
+  
 
 @media (max-width: 750px) {
     article {

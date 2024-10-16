@@ -16,6 +16,7 @@ section {
     justify-content: space-between;
     gap: 10px;
     z-index: 1;
+    width: 85vw;
 
 
     h2 {
@@ -136,6 +137,15 @@ section {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    [data-aos] {
+      opacity: 1 !important;  /* Animationen auf mobilen Geräten verhindern */
+      transform: none !important;
+      transition: none !important; /* Entferne die Übergänge */
+    }
+  }
+  
 
 @media (max-width: 600px) {
     section {
