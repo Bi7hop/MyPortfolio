@@ -258,7 +258,7 @@ h1 {
   }
   
   .marquee-container {
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -266,7 +266,7 @@ h1 {
     bottom: 50px;
     height: 60px;
     rotate: -3deg;
-    width: 100%;
+    width: calc(100vw - 11px);
     background-color: rgba(128,
         128,
         128,
@@ -375,6 +375,10 @@ h1 {
   
     .mail-icon {
       display: block;
+    }
+
+    .marquee-container {
+      width: calc(100vw - 2px);
     }
   }
   
