@@ -127,7 +127,6 @@ article {
     content: '';
     position: absolute;
     top: 50%;
-    right: px;  
     transform: translateY(-50%);
     width: 300px;
     height: 300px;
@@ -147,7 +146,6 @@ body {
     max-width: 100%;
     position: fixed;
     top: 130px;
-    left: 50;
     z-index: 100;
     border: 1px solid #3dcfb6;
     border-radius: 32px;
@@ -331,9 +329,9 @@ body {
 
 @media screen and (max-width: 768px) {
     [data-aos] {
-      opacity: 1 !important;  /* Animationen auf mobilen Geräten verhindern */
+      opacity: 1 !important;  
       transform: none !important;
-      transition: none !important; /* Entferne die Übergänge */
+      transition: none !important;
     }
   }
   
@@ -355,7 +353,8 @@ body {
     .project-info {
         display: flex;
         flex-direction: column-reverse;
-        height: 80vh;
+        height: 95vh;
+        top: 15px;
 
         h1 {
             font-size: 48px;
@@ -367,7 +366,7 @@ body {
        
         .project-left {
             width: 400px;
-            gap: 10px;
+            gap: 0;
             padding: 0px;
 
             .project-icons {
