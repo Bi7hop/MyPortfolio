@@ -301,3 +301,33 @@ label {
         transform: translateY(7px);
     }
 }
+
+@media(max-width: 1460px) {
+    section {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  @media(max-width: 850px) {
+    .contact-container{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 60px 0;
+
+      .left-container {
+        width: 100%;
+
+        .contact-text {
+          h1 {
+            font-size: 42px;
+          }
+        }
+      }
+
+      .right-container {
+        width: 100%;
+      }
+    }
+  }
