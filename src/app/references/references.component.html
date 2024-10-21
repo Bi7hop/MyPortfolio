@@ -4,7 +4,7 @@
     </div>
     <div class="wrapper">
       <div class="carousel">
-        <div class="carousel__item" *ngFor="let reference of references; let i = index"
+        <div class="carousel-item" *ngFor="let reference of references; let i = index"
           [ngClass]="{
             'active': i === currentIndex,
             'left': i === (currentIndex - 1 + references.length) % references.length,
@@ -14,7 +14,7 @@
           
           <img *ngIf="i === currentIndex" src="assets/icons/refrences/quotes.png" alt="Quotes" class="quotes-icon">
   
-          <div class="carousel__item-body">
+          <div class="carousel-item-body">
             <p class="title">{{ reference.title | translate }}</p>
             <div class="name-line-container">
               <hr class="line">
