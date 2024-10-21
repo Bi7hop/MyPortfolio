@@ -12,8 +12,6 @@ section {
 
 .border {
     padding: 40px;
-    border-radius: 32px;
-    border: 1px solid #3DCFB6;
     width: 90%;
     height: 90vh;
     display: flex;
@@ -51,6 +49,8 @@ section {
     a {
         color: #3DCFB6;
         text-decoration: none;
+        word-wrap: break-word; 
+        word-break: break-all;  
     }
 }
 
@@ -106,5 +106,20 @@ section {
     transform: scale(1.3); 
   }
 
+  @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px; 
+    }
+
+    p, h3 {
+        font-size: 18px; 
+    }
+
+    .back-arrow {
+        height: 30px;
+        width: 65px; 
+        top: -60px;
+    }
+}
 
   
