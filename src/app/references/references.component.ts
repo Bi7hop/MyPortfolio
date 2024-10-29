@@ -16,9 +16,9 @@ export class ReferencesComponent {
   isHoveringNext = false;
   
   references = [
-    { title: 'references.textbox1', name: 'Homer Simpson' },
-    { title: 'references.textbox2', name: 'Maggi Simpson' },
-    { title: 'references.textbox3', name: 'Bart Simpson' }
+    { title: 'references.textbox1', name: 'Toni Kleinfeld' },
+    { title: 'references.textbox2', name: 'Mario Milaj' },
+    { title: 'references.textbox3', name: 'Sascha Borowski' }
   ];
 
   constructor() { }

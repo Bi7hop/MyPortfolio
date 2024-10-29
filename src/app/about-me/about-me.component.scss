@@ -47,10 +47,10 @@ section {
     .profile-lines {
         position: absolute;
         z-index: 1;
-        right: 30px;
+        left: -30px;
         top: 30px;
         opacity: 0;
-        transform: translateX(0, 0);  
+        // transform: translateX(0, 0);  
         transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         pointer-events: none;
     }
