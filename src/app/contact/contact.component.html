@@ -44,7 +44,10 @@
           <div class="bottom-side">
             <div class="send-contact">
               <input type="checkbox" id="check" class="checkbox" formControlName="agree" autocomplete="off" />
-              <label id="label-white" for="check">{{ 'policy.text1' | translate }} <a href="/privacy">{{ 'policy.text2' | translate }}</a> {{ 'policy.text3' | translate }}</label>
+              <label id="label-white" for="check">{{ 'policy.text1' | translate }}
+                <a routerLink="/privacy">{{ 'policy.text2' | translate }}</a>
+                {{ 'policy.text3' | translate }}
+             </label>
             </div>
             <div class="btn-container">
               <button type="submit" [disabled]="contactForm.invalid">{{ 'contactform.button' | translate }}</button>
