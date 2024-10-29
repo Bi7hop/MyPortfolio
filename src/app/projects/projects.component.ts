@@ -26,7 +26,7 @@ export class ProjectsComponent {
       title: 'Join',
       subtitle: 'project-info.subtitle',
       githubUrl: 'https://github.com',
-      livetestUrl: 'https://github.com',
+      livetestUrl: 'https://join.marcel-menke.info/login.html',
       description: 'project-info.description',
       technologies: [
         { iconUrl: '../../assets/icons/projects/angular.png' },
@@ -40,8 +40,8 @@ export class ProjectsComponent {
     {
       number: '02',
       title: 'El Pollo Loco',
-      githubUrl: 'https://github.com',
-      livetestUrl: 'https://github.com',
+      githubUrl: 'https://github.com/Bi7hop/El-polllo-loco',
+      livetestUrl: 'https://elpolloloco.marcel-menke.info/index.html',
       subtitle: 'project-info.subtitle1',
       description: 'project-info.description1',
       technologies: [
