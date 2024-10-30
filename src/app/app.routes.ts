@@ -5,7 +5,11 @@ import { PrivacyComponent } from './privacy/privacy.component';
 
 export const routes: Routes = [
   { path: 'landing', component: LandingPageComponent },
+  { path: 'landing/', component: LandingPageComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
-  {path: 'imprint', component: ImprintComponent},
-  {path: 'privacy', component: PrivacyComponent},
+  { path: 'imprint', component: ImprintComponent },
+  { path: 'imprint/', component: ImprintComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'privacy/', component: PrivacyComponent },
 ];
+
