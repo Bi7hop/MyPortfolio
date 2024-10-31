@@ -126,6 +126,15 @@ label {
     font-weight: 100;
 }
 
+input.ng-invalid.ng-touched::placeholder,
+textarea.ng-invalid.ng-touched::placeholder {
+    color: rgba(255, 0, 0, 0.7); 
+}
+
+.error-text {
+    color: red;
+}
+
 .sentmessage {
     color: #3DCFB6;
     font-family: 'Karla', sans-serif;

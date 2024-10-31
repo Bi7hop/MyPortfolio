@@ -29,11 +29,24 @@ export class ContactComponent {
     },
   };
 
+  ngOnInit() {
+    this.contactForm.controls['message'].valueChanges.subscribe(value => {
+        const wordCount = value ? value.trim().split(/\s+/).length : 0;
+        const messageField = document.getElementById('message') as HTMLTextAreaElement;
+
+        if (wordCount < 8) {
+            messageField.style.color = 'red'; 
+        } else {
+            messageField.style.color = ''; 
+        }
+    });
+}
+
   constructor(private http: HttpClient, private fb: FormBuilder, public translateService: TranslateService) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, this.wordCountValidator(8)]],
+      message: ['', [Validators.required]],
       agree: [false, [Validators.requiredTrue]]
     });
   }
@@ -66,13 +79,13 @@ export class ContactComponent {
     }, 5000);
   }
 
-  wordCountValidator(minWords: number) {
-    return (control: AbstractControl) => {
-      const value = control.value || '';
-      const wordCount = value.trim().split(/\s+/).length;
-      return wordCount >= minWords ? null : { wordCount: true };
-    };
-  }
+  clearErrorOnFocus(controlName: string, event: any) {
+    const control = this.contactForm.controls[controlName];
+    if (control.touched && control.invalid) {
+        event.target.value = ''; 
+        event.target.style.color = '#ffffff'; 
+    }
+}
 
   scrollToTop(): void {
     window.scroll({
