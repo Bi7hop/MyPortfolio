@@ -176,15 +176,22 @@
   },
 
   "error": {
-    "name": "Bitte geben Sie Ihren Namen ein.",
-    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-    
-   
-"message": "Die Nachricht muss mindestens 8 Wörter lang sein.",
-    
-   
-"general": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
-},
+    "name": {
+      "required": "Bitte geben Sie Ihren Namen ein."
+    },
+    "email": {
+      "required": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+      "pattern": "Beispiel@muster.de."
+    },
+    "message": {
+      "required": "Bitte geben Sie eine Nachricht ein.",
+      "wordCount": "Die Nachricht muss mindestens 8 Wörter enthalten."
+    },
+    "general": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "form": {
+      "invalid": "Bitte korrigieren Sie die Fehler im Formular."
+    }
+  },
 
 "sent": {
     

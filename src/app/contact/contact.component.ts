@@ -45,10 +45,12 @@ export class ContactComponent {
   wordCountValidator(minWords: number) {
     return (control: AbstractControl) => {
       if (!control.value) {
-        return { wordCount: { requiredWords: minWords, actualWords: 0 } };
+        return { required: true }; // Adjusted to use the 'required' key
       }
       const wordCount = control.value.trim().split(/\s+/).length;
-      return wordCount < minWords ? { wordCount: { requiredWords: minWords, actualWords: wordCount } } : null;
+      return wordCount < minWords
+        ? { wordCount: { requiredWords: minWords, actualWords: wordCount } }
+        : null;
     };
   }
 

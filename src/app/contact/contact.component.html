@@ -20,37 +20,64 @@
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-formular">
             <div class="top-side">
                 <div class="input">
-                    <label for="name">{{ 'contactform.name' | translate }}</label>
-                    <input
-                        type="text"
-                        id="name"
-                        formControlName="name"
-                        [placeholder]="contactForm.controls['name'].invalid && contactForm.controls['name'].touched ? ('error.name' | translate) : ('placeholder.name' | translate)"
-                        autocomplete="off"
-                        required
-                    />
+                  <label for="name">{{ 'contactform.name' | translate }}</label>
+                  <input
+                    type="text"
+                    id="name"
+                    formControlName="name"
+                    placeholder="{{ 'placeholder.name' | translate }}"
+                    autocomplete="off"
+                    required
+                  />
+                  <div
+                    class="error-message"
+                    *ngIf="contactForm.controls['name'].invalid && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)"
+                  >
+                    {{ 'error.name.required' | translate }}
+                  </div>
                 </div>
                 <div class="input">
-                    <label for="email">{{ 'contactform.email' | translate }}</label>
-                    <input
-                        type="email"
-                        id="email"
-                        formControlName="email"
-                        [placeholder]="contactForm.controls['email'].invalid && contactForm.controls['email'].touched ? ('error.email' | translate) : ('placeholder.email' | translate)"
-                        autocomplete="off"
-                        required
-                    />
+                  <label for="email">{{ 'contactform.email' | translate }}</label>
+                  <input
+                    type="email"
+                    id="email"
+                    formControlName="email"
+                    placeholder="{{ 'placeholder.email' | translate }}"
+                    autocomplete="off"
+                    required
+                  />
+                  <div
+                    class="error-message"
+                    *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)"
+                  >
+                    <div *ngIf="contactForm.controls['email'].errors?.['required']">
+                      {{ 'error.email.required' | translate }}
+                    </div>
+                    <div *ngIf="contactForm.controls['email'].errors?.['pattern']">
+                      {{ 'error.email.pattern' | translate }}
+                    </div>
+                  </div>
                 </div>
                 <div class="input">
                   <label for="message">{{ 'contactform.message' | translate }}</label>
-                  <textarea
-                      id="message"
-                      formControlName="message"
-                      [placeholder]="contactForm.controls['message'].invalid && contactForm.controls['message'].touched ? ('error.message' | translate) : ('placeholder.message' | translate)"
-                      rows="2"
-                      required
-                      [ngClass]="{'error-text': contactForm.controls['message'].hasError('wordCount')}"
-                  ></textarea>
+  <textarea
+    id="message"
+    formControlName="message"
+    placeholder="{{ 'placeholder.message' | translate }}"
+    rows="2"
+    required
+  ></textarea>
+  <div
+    class="error-message"
+    *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)"
+  >
+    <div *ngIf="contactForm.controls['message'].errors?.['required']">
+      {{ 'error.message.required' | translate }}
+    </div>
+    <div *ngIf="contactForm.controls['message'].errors?.['wordCount']">
+      {{ 'error.message.wordCount' | translate }}
+    </div>
+  </div>
                 </div>
             </div>
           <div class="bottom-side">

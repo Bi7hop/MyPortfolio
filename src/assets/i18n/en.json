@@ -181,13 +181,28 @@
 },
 
 "error": {
-    "name": "Please enter your name.",
-    "email": "Please enter a valid email.",
-    "message": "Message must be at least 8 words long.",
-    
-   
-"general": "An error occurred. Please try again."
+  "name": {
+    "required": "Please enter your name."
+  
+  
+},
+  "email": {
+    "required": "Please enter your email address.",
+    "pattern": "Explain@Test.com"
   },
+  "message": {
+    "required": "Please enter a message.",
+    
+ 
+"wordCount": "The message must contain at least 8 words."
+  },
+  "general": "An error has occurred. Please try again.",
+  "form": {
+    "invalid": "Please correct the errors in the form."
+  
+  
+}
+},
 
   "sent": {
     "message": "Message sent successfully!"
