@@ -135,6 +135,13 @@ textarea.ng-invalid.ng-touched::placeholder {
     color: red;
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.25em;
+  }
+  
+
 .sentmessage {
     color: #3DCFB6;
     font-family: 'Karla', sans-serif;

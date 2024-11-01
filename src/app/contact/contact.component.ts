@@ -18,6 +18,8 @@ export class ContactComponent {
   messageSent: boolean = false;
   errorMessage: string = '';
 
+  emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   post = {
     endPoint: 'https://marcel-menke.info/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -30,25 +32,24 @@ export class ContactComponent {
   };
 
   ngOnInit() {
-    this.contactForm.controls['message'].valueChanges.subscribe(value => {
-        const wordCount = value ? value.trim().split(/\s+/).length : 0;
-        const messageField = document.getElementById('message') as HTMLTextAreaElement;
-
-        if (wordCount < 8) {
-            messageField.style.color = 'red'; 
-        } else {
-            messageField.style.color = ''; 
-        }
-    });
-}
-
-  constructor(private http: HttpClient, private fb: FormBuilder, public translateService: TranslateService) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
+      message: ['', [Validators.required, this.wordCountValidator(8)]],
       agree: [false, [Validators.requiredTrue]]
     });
+  }
+
+  constructor(private http: HttpClient, private fb: FormBuilder, public translateService: TranslateService) {}
+
+  wordCountValidator(minWords: number) {
+    return (control: AbstractControl) => {
+      if (!control.value) {
+        return { wordCount: { requiredWords: minWords, actualWords: 0 } };
+      }
+      const wordCount = control.value.trim().split(/\s+/).length;
+      return wordCount < minWords ? { wordCount: { requiredWords: minWords, actualWords: wordCount } } : null;
+    };
   }
 
   submitForm() {
@@ -68,7 +69,7 @@ export class ContactComponent {
           }
         });
     } else {
-      this.errorMessage = 'Bitte füllen Sie alle Felder korrekt aus und stellen Sie sicher, dass die Nachricht mindestens 10 Wörter enthält.';
+      this.errorMessage = 'Bitte füllen Sie alle Felder korrekt aus und stellen Sie sicher, dass die Nachricht mindestens 8 Wörter enthält.';
       console.log('Formular ungültig:', this.contactForm.errors);
     }
   }
@@ -82,10 +83,10 @@ export class ContactComponent {
   clearErrorOnFocus(controlName: string, event: any) {
     const control = this.contactForm.controls[controlName];
     if (control.touched && control.invalid) {
-        event.target.value = ''; 
-        event.target.style.color = '#ffffff'; 
+      event.target.value = ''; 
+      event.target.style.color = '#ffffff'; 
     }
-}
+  }
 
   scrollToTop(): void {
     window.scroll({
@@ -95,3 +96,5 @@ export class ContactComponent {
     });
   }
 }
+
+
