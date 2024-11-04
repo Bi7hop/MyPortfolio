@@ -31,11 +31,14 @@ section {
 
     .profile-img {
         position: relative;
-        width: 95%; 
+        // width: 95%; 
+        width: 568px;
         max-width: 568px; 
-        height: auto;
+        height: 568px;
+        object-fit: cover;
         border-radius: 16px;
         z-index: 5;
+        filter: brightness(0.7) contrast(1.2) saturate(0.8);
 
         &:hover + .profile-lines {
             opacity: 1;
