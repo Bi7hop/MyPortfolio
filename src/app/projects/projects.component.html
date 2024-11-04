@@ -61,11 +61,11 @@
             </div>
             <img [src]="selectedProject.infoUrl">
             <div class="next-button-container">
-                <button (click)="next()">
-                    {{ 'project-info.button' | translate }}
-                    <img src="../../assets/icons/projects/arrows.png" alt="Next Project">
+                <button (click)="next($event)">
+                  {{ 'project-info.button' | translate }}
+                  <img src="../../assets/icons/projects/arrows.png" alt="Next Project">
                 </button>
-            </div>
+              </div>              
             
         </div>
     </div>

@@ -1,16 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, ChangeDetectorRef } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ CommonModule, TranslateModule ],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-
   showProjectInfo: boolean = false;
   selectedProject: any = null;
   infoImageUrl: string | null = null;
@@ -18,8 +17,8 @@ export class ProjectsComponent {
   currentIndex: number = 0;
   showProjects: boolean = true;
 
-  constructor(private renderer: Renderer2) {}
-  
+  constructor(private renderer: Renderer2, private cdr: ChangeDetectorRef) {}
+
   projects = [
     {
       number: '01',
@@ -32,10 +31,10 @@ export class ProjectsComponent {
         { iconUrl: '../../assets/icons/projects/angular.png' },
         { iconUrl: '../../assets/icons/projects/html.png' },
         { iconUrl: '../../assets/icons/projects/css.png' },
-        { iconUrl: '../../assets/icons/projects/firebase.png' }
+        { iconUrl: '../../assets/icons/projects/firebase.png' },
       ],
       imageUrl: '../../assets/icons/projects/join.hover.png',
-      infoUrl: '../../assets/icons/projects/join.big.png'
+      infoUrl: '../../assets/icons/projects/join.big.png',
     },
     {
       number: '02',
@@ -47,32 +46,33 @@ export class ProjectsComponent {
       technologies: [
         { iconUrl: '../../assets/icons/projects/html.png' },
         { iconUrl: '../../assets/icons/projects/css.png' },
-        { iconUrl: '../../assets/icons/projects/javascript.png' }
+        { iconUrl: '../../assets/icons/projects/javascript.png' },
       ],
       imageUrl: '../../assets/icons/projects/epl.hover.png',
-      infoUrl: '../../assets/icons/projects/epl.big.png'
-    }
-  ]
+      infoUrl: '../../assets/icons/projects/epl.big.png',
+    },
+  ];
 
-  next(): void {
+  next(event: Event): void {
+    event.stopPropagation();
+
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
     this.selectedProject = this.projects[this.currentIndex];
+
+    this.cdr.detectChanges();
   }
 
   selectProject(project: any): void {
     this.selectedProject = project;
     this.showProjectInfo = true;
-    this.renderer.addClass(document.body, 'no-scroll');
   }
 
   closeProject(): void {
     this.selectedProject = null;
     this.showProjectInfo = false;
-    this.renderer.removeClass(document.body, 'no-scroll'); 
   }
 
   toggleProjects(): void {
     this.showProjects = !this.showProjects;
   }
-
 }
