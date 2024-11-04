@@ -63,6 +63,7 @@ export class ProjectsComponent {
   }
 
   selectProject(project: any): void {
+    this.currentIndex = this.projects.findIndex((p) => p === project);
     this.selectedProject = project;
     this.showProjectInfo = true;
   }
