@@ -60,7 +60,6 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(formData), this.post.options)
         .subscribe({
           next: () => {
-            console.log('Formular erfolgreich gesendet:', formData);
             this.messageSent = true;
             this.contactForm.reset();
             this.hideSuccessMessageAfterDelay();
@@ -75,6 +74,7 @@ export class ContactComponent {
       console.log('Formular ungültig:', this.contactForm.errors);
     }
   }
+  
 
   hideSuccessMessageAfterDelay() {
     setTimeout(() => {
