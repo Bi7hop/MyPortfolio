@@ -85,13 +85,21 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateToSection(section: string) {
+    const isMobile = window.innerWidth <= 768;
+    let sectionId = section;
+  
+    if (section === 'about-me') {
+      sectionId = isMobile ? 'about-me-mobile' : 'about-me-desktop';
+    }
+  
     if (this.router.url !== '/') {
-      this.targetSection = section;
+      this.targetSection = sectionId;
       this.router.navigate(['/']);
     } else {
-      this.scrollToSection(section);
+      this.scrollToSection(sectionId);
     }
   }
+  
 
   scrollToSection(section: string) {
     const element = document.getElementById(section);
