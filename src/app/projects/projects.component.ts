@@ -24,7 +24,7 @@ export class ProjectsComponent {
       number: '01',
       title: 'Join',
       subtitle: 'project-info.subtitle',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/Bi7hop/Join',
       livetestUrl: 'https://join.marcel-menke.info/login.html',
       description: 'project-info.description',
       technologies: [
