@@ -317,22 +317,51 @@ h1 {
   }
   
   .typing-text {
+    position: relative;
+    width: fit-content;
     margin: 0;
-    display: inline-block;
+    white-space: nowrap;
     overflow: hidden;
-    text-wrap: nowrap;
-    animation: typing 1.2s steps(25, end);
+    visibility: hidden;
   }
   
-  @keyframes typing {
-    from {
-      max-width: 0;
-    }
-  
-    to {
-      max-width: 100%;
-    }
+  // H2 Animation
+h2.typing-text {
+  visibility: visible;
+  animation: typing-h2 1.5s steps(20, end),
+             blink 0.75s step-end infinite;
+  width: 0;
+  animation-fill-mode: forwards;
+}
+
+// H1 Animation - starts after H2 finishes
+h1.typing-text {
+  visibility: visible;
+  animation: typing-h1 1.5s steps(20, end) 1.5s,
+             blink 0.75s step-end infinite 1.5s,
+             removeCursor 0.1s step-end forwards 3s;
+  width: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing-h2 {
+  from { 
+    width: 0; 
   }
+  to { 
+    width: 100%; 
+  }
+}
+
+@keyframes typing-h1 {
+  from { 
+    width: 0; 
+  }
+  to { 
+    width: 100%; 
+  }
+}
+
   
   @media (max-width: 1220px) {
     .above-me-container h1 {
