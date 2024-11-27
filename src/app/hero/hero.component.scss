@@ -325,7 +325,6 @@ h1 {
     visibility: hidden;
   }
   
-  // H2 Animation
 h2.typing-text {
   visibility: visible;
   animation: typing-h2 1.5s steps(20, end),
@@ -334,7 +333,6 @@ h2.typing-text {
   animation-fill-mode: forwards;
 }
 
-// H1 Animation - starts after H2 finishes
 h1.typing-text {
   visibility: visible;
   animation: typing-h1 1.5s steps(20, end) 1.5s,
