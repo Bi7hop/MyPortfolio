@@ -27,6 +27,7 @@ export class ProjectsComponent {
       githubUrl: 'https://github.com/Bi7hop/Join',
       livetestUrl: 'https://join.marcel-menke.info/login.html',
       description: 'project-info.description',
+      techStack: 'JavaScript | HTML | CSS | Firebase',
       technologies: [
         { iconUrl: '../../assets/icons/projects/angular.png' },
         { iconUrl: '../../assets/icons/projects/html.png' },
@@ -35,6 +36,7 @@ export class ProjectsComponent {
       ],
       imageUrl: '../../assets/icons/projects/join.hover.png',
       infoUrl: '../../assets/icons/projects/join.big.png',
+      inDevelopment: false
     },
     {
       number: '02',
@@ -43,6 +45,7 @@ export class ProjectsComponent {
       livetestUrl: 'https://elpolloloco.marcel-menke.info/index.html',
       subtitle: 'project-info.subtitle1',
       description: 'project-info.description1',
+      techStack: 'HTML | CSS | JavaScript',
       technologies: [
         { iconUrl: '../../assets/icons/projects/html.png' },
         { iconUrl: '../../assets/icons/projects/css.png' },
@@ -50,15 +53,69 @@ export class ProjectsComponent {
       ],
       imageUrl: '../../assets/icons/projects/epl.hover.png',
       infoUrl: '../../assets/icons/projects/epl.big.png',
+      inDevelopment: false
+    },
+    {
+      number: '03',
+      title: 'Terminal Portfolio',
+      githubUrl: 'https://github.com/Bi7hop/matrix-portfolio',
+      livetestUrl: 'https://portfolio.marcel-menke.info',
+      subtitle: 'project-info.subtitle2',
+      description: 'project-info.description2',
+      techStack: 'Angular | HTML | CSS | TypeScript',
+      technologies: [
+        { iconUrl: '../../assets/icons/projects/angular.png' },
+        { iconUrl: '../../assets/icons/projects/html.png' },
+        { iconUrl: '../../assets/icons/projects/css.png' },
+        { iconUrl: '../../assets/icons/projects/typescript.png' },
+      ],
+      imageUrl: '../../assets/icons/projects/terminal.png',
+      infoUrl: '../../assets/icons/projects/terminal1.png',
+      inDevelopment: false
+    },
+    // Neues Projekt: Finanz Buddy (in Entwicklung – daher ausgegraut)
+    {
+      number: '04',
+      title: 'Finanz Buddy',
+      githubUrl: 'https://github.com/Bi7hop/Finanz_Buddy',
+      livetestUrl: '',
+      subtitle: 'project-info.subtitle3',
+      description: 'project-info.description3',
+      techStack: 'Angular | TypeScript | SCSS',
+      technologies: [
+        { iconUrl: '../../assets/icons/projects/angular.png' },
+        { iconUrl: '../../assets/icons/projects/typescript.png' },
+        { iconUrl: '../../assets/icons/projects/html.png' },
+      ],
+      imageUrl: '../../assets/icons/projects/finanz.png',
+      infoUrl: '../../assets/icons/projects/finanz1.png',
+      inDevelopment: true
+    },
+    // Neues Projekt: Job Hunter (in Entwicklung – daher ausgegraut)
+    {
+      number: '05',
+      title: 'Job Hunter',
+      githubUrl: 'https://github.com/Bi7hop/Job-Hunter',
+      livetestUrl: '',
+      subtitle: 'project-info.subtitle4',
+      description: 'project-info.description4',
+      techStack: 'Angular | HTML | CSS | JavaScript',
+      technologies: [
+        { iconUrl: '../../assets/icons/projects/angular.png' },
+        { iconUrl: '../../assets/icons/projects/html.png' },
+        { iconUrl: '../../assets/icons/projects/css.png' },
+        { iconUrl: '../../assets/icons/projects/javascript.png' },
+      ],
+      imageUrl: '../../assets/icons/projects/jobhunter.png',
+      infoUrl: '../../assets/icons/projects/jobhunter1.png',
+      inDevelopment: true
     },
   ];
 
   next(event: Event): void {
     event.stopPropagation();
-
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
     this.selectedProject = this.projects[this.currentIndex];
-
     this.cdr.detectChanges();
   }
 
