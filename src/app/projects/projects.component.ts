@@ -71,7 +71,7 @@ export class ProjectsComponent {
       ],
       imageUrl: '../../assets/icons/projects/terminal.png',
       infoUrl: '../../assets/icons/projects/terminal1.png',
-      inDevelopment: false
+      inDevelopment: true
     },
     // Neues Projekt: Finanz Buddy (in Entwicklung – daher ausgegraut)
     {
@@ -94,20 +94,20 @@ export class ProjectsComponent {
     // Neues Projekt: Job Hunter (in Entwicklung – daher ausgegraut)
     {
       number: '05',
-      title: 'Job Hunter',
-      githubUrl: 'https://github.com/Bi7hop/Job-Hunter',
+      title: 'Job Tracker',
+      githubUrl: 'https://github.com/Bi7hop/JobTracker',
       livetestUrl: '',
       subtitle: 'project-info.subtitle4',
       description: 'project-info.description4',
-      techStack: 'Angular | HTML | CSS | JavaScript',
+      techStack: 'Angular | HTML | Tailwind | JavaScript',
       technologies: [
         { iconUrl: '../../assets/icons/projects/angular.png' },
         { iconUrl: '../../assets/icons/projects/html.png' },
         { iconUrl: '../../assets/icons/projects/css.png' },
         { iconUrl: '../../assets/icons/projects/javascript.png' },
       ],
-      imageUrl: '../../assets/icons/projects/jobhunter.png',
-      infoUrl: '../../assets/icons/projects/jobhunter1.png',
+      imageUrl: '../../assets/icons/projects/jobtracker.png',
+      infoUrl: '../../assets/icons/projects/jobtracker1.png',
       inDevelopment: true
     },
   ];
